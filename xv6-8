@@ -1,0 +1,22 @@
+# TIL
+2021-07-21
+
+aging:
+-scheduling technique used to avoid starvation. 
+-increase the priority of a task, based on its waiting time in the ready queue.
+
+priority inversion:
+-scheduling in which a high priority task is indirectly preempted by a lower priority task effectively 
+ inverting the relative priorities of the two tasks
+
+method for eliminating unbounded priority inversion.
+
+priority inheritance :
+-a process scheduling algorithm increases the priority of a process A to the maximum priority of any other process waiting for any resource
+ on which A has a resource lock.
+
+xv6 scheduler를 Round-Robin scheduling에서 priority scheduling으로 바꾸면서 aging방법을 통해서 
+starvation을 해결하는 것을 눈으로 확인하여 알 수 있었고, 두번째로 priority donation과 priority inheritance를
+구현하는데 있어서 이것이 priority inversion의 상황이 발생했을 때 해결하기 위해 사용되는 것을 알았다.
+또한 여러 사람들과 공동으로 작업을 할 때 서로 각자 코드부터 짜는 것이 아닌 함수명과 기능등을 먼저 정해서
+작업 하는 것이 testcase를 사용하여 testing하는 것이 좋은 방법인 것을 알게 되었다. 

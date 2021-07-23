@@ -1,0 +1,16 @@
+# TIL
+2021-07-16
+Interrupt Descriptor Table(IDT)
+ -data structure used by the x86 architecture to implement an interrupt vector table.
+
+Descriptor privilege level(DPL)
+ -the minimum privilege level requiredc to access the segment.
+ 
+using argint,argptr,argstr,argfd to retrieve the n'th system call argument
+
+
+느낀점
+ exit과 wait 함수를 고치면서 처음에 argument를 어떻게 줘야할지 고민하면서
+ 코드를 보았는데 argint,argptr,argstr,argfd 함수를 통해서 system call argument에 접근하여
+ 가져올 수 있었다. 또한 task segment descriptor가 무엇인지 책에는 자세이 나와있지 않아서
+ 조금 더 공부를 해야할 것 같다.

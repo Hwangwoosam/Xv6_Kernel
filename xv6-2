@@ -1,0 +1,30 @@
+# TIL
+2021-07-13
+
+ELF(Excutable and Linkable Format)
+  1.File layout
+    -File header
+    -Program header
+    -Section header
+   
+  section = smallest continuous regions in the file.
+    -.bss = space for uninitialized global variables.
+    -.data
+    -.text
+    
+  sector is a subdivision of a track on a magnetic disk or optical disc.
+  
+  boot sector is the sector of a persistent data storage device 
+  which contains machine code to be loaded into random-access memory
+  
+  LMA(load memory address) = the address at which the section will be loaded.
+  
+  VMA(virtual memory address) = the address the section will have when the output file is run.
+  
+  느낀점
+  OS를 공부하면 할수록 내가 기본 개념에 대한 공부가 많이 부족하다는 것을 느낀다.
+  머릿속에 떠다니는 개념들을 다시 공부해야 겠다.
+  sector,section 그리고 로딩과정에서 어떻게 작동되는지 자세한 것들을
+  알아보고 이해하도록 해야겠다.
+  
+  

@@ -1,0 +1,33 @@
+# TIL
+2021-07-
+
+swtch:
+# void swtch(struct context **old, struct context *new);
+.globl swtch
+swtch:
+movl 4(%esp), %eax               -> 첫번째 인자(old)의 주소를 %eax에 저장
+movl 8(%esp), %edx               -> 두번째 인자(new)의 주소를 %edx에 저장
+
+pushl %ebp                       -> 현재 context를 stack에 저장
+pushl %ebx
+pushl %esi
+pushl %edi
+
+------stack pointer를 바꾼다.
+movl %esp, (%eax)                -> old의 stack pointer를 eax에 복사
+movl %edx, %esp                  -> new의 stack pointer를 esp에 복사
+
+popl %edi                        ->새로운 context를 load한다.
+popl %esi
+popl %ebx
+popl %ebp
+ret
+
+ebx(Extended Base Register)
+
+edi(Extended Destination Index)
+
+esi(Extended Source Index)
+
+위의 함수와 scheduler함수를 보면서 어떻게 context switch가 일어나는지에 대해
+알 수 있었고, 각각의 register에 어떠한 값들이 저장되는지를 볼 수 있었다.
