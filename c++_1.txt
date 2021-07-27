@@ -5,4 +5,19 @@ mismatch로 인한 잘못된 경우를 확인 하면서 어떤 곳에서 실수�
 
 floating-point format specifiers에서 %f,%e,%g 따라 각각 어떻게 출력의 차이를 알 수있었다.
 또한 C++에서 어떤 것이 plain-old-data classes(POD)인지, 또한 어떤 특징을 갖고있는지에 대해 
-알아 보았다. 
+알아 보았다.(struct,union)
+
+dot operator를 통해서 안에 있는 members에 접근 할 수 있다.union 또한 dot operator를 통해서
+접근 할 수 있는데 하지만 union은 모든 member들이 하나의 메모리 공간을 공유하기 때문에
+data corruption에 대한 위험이 있는 것이 차이이다.
+
+Access controls
+- C++에서 모든 struct member는 default값으로 public이지만 class에서 member의 default값은
+private이다.
+
+initializing
+- int e = 42;
+  int f{42};
+  int g = {42};
+  int h(42);
+
