@@ -1,2 +1,8 @@
-2021 07 27
+2021-07-27
 
+Type에 따른 format specifier를 확인해 볼수 있었고, type에 따른 specifier 사이에
+mismatch로 인한 잘못된 경우를 확인 하면서 어떤 곳에서 실수가 많이 나타나는지 알 수 있었다.
+
+floating-point format specifiers에서 %f,%e,%g 따라 각각 어떻게 출력의 차이를 알 수있었다.
+또한 C++에서 어떤 것이 plain-old-data classes(POD)인지, 또한 어떤 특징을 갖고있는지에 대해 
+알아 보았다. 
