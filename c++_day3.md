@@ -1,5 +1,7 @@
 # TIL
 
+2021-07-29
+
 Dynamic arrays
 -	arrays with dynamic storage duration.
 Allocation
